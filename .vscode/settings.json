@@ -1,0 +1,38 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.swc": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.editorconfig": true,
+    "**/protractor.conf.js": true,
+    "**/tslint.json": true,
+    "**/karma.conf.js": true,
+    "**/.gitignore": true,
+    "**/.gitkeep": true,
+    "**/LICENSE": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/node_modules/**": true,
+    ".vitepress/cache/**": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.swc": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.editorconfig": true,
+    "**/protractor.conf.js": true,
+    "**/tslint.json": true,
+    "**/karma.conf.js": true,
+    "**/.gitignore": true,
+    "**/.gitkeep": true,
+    "**/LICENSE": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/node_modules/**": true,
+    ".vitepress/cache/**": true
+  }
+}
