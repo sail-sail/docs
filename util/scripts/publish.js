@@ -4,7 +4,7 @@ const { randomUUID } = require("node:crypto");
 const publish_cnf = require(`${ __dirname }/publish_cnf.js`);
 
 const projectName = "docs";
-const publishBase = publish_cnf[projectName].publishBase;
+const publishBase = publish_cnf[projectName].publishBase || "/data/";
 
 const sshConfig = {
   host: publish_cnf[projectName].host,
@@ -12,7 +12,7 @@ const sshConfig = {
   password: publish_cnf[projectName].password,
 };
 
-console.log({ ...sshConfig, password: "" });
+console.log({ ...sshConfig, password: undefined });
 
 const buildPath = `${ __dirname }/../../.vitepress/dist/`;
 const publishPath = `${ publishBase }/${ projectName }/`;

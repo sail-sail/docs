@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开发手册
-      link: /dict
+      link: /introduce
 
 features:
   - title: 自动生代码
@@ -19,4 +19,3 @@ features:
   - title: 量身定制的ORM框架
     details: 创建外键关联配置, 生成代码之后, 会给每个表生成 dao层, 方便业务层调用
 ---
-

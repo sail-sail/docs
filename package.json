@@ -1,11 +1,11 @@
 {
   "scripts": {
     "start": "vitepress dev",
-    "build": "vitepress build && node ./util/scripts/publish.js",
+    "build-prod": "vitepress build && node ./util/scripts/publish.js",
     "preview": "vitepress preview"
   },
   "devDependencies": {
     "ssh2-promise": "1.0.3",
-    "vitepress": "1.0.0-rc.24"
+    "vitepress": "1.2.3"
   }
 }
