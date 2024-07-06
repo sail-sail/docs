@@ -18,9 +18,8 @@ services:
     ports:
       - "33891:3306"
     volumes:
-      - /data/software/mysql/conf:/etc/mysql/conf.d
-      - /data/software/mysql/data:/var/lib/mysql
-      - /data/software/mysql/mysql-bin:/var/lib/mysql-bin
+      - ./conf:/etc/mysql/conf.d
+      - ./data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=tIKgUhK8BOXLR20G
     security_opt:
