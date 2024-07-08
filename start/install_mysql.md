@@ -1,11 +1,12 @@
 # 安装 MySQL 数据库
 
 1. 准备好 `ubuntu 20` 或者以上的系统
+    - 假设外网 IP 为 `39.104.15.113`
 2. 安装好 `docker` 和 `docker-compose`
 3. 创建 `/data/software/mysql` 目录
 4. 在 `/data/software/mysql` 目录下创建 `docker-compose.yml` 文件
 
-    - 假设数据库对外端口为 `33891`，假设数据库 `root`账户的密码为 `tIKgUhK8BOXLR20G`
+    - 假设数据库对外端口为 `33891`，假设数据库 `root`账户的密码为 `5WZuNyFHahIwlizJ`
     - 密码可以到 [https://suijimimashengcheng.bmcx.com](https://suijimimashengcheng.bmcx.com/) 随机生成一个密码
     
     - `/data/software/mysql/docker-compose.yml` 文件内容如下：
@@ -21,7 +22,7 @@ services:
       - ./conf:/etc/mysql/conf.d
       - ./data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=tIKgUhK8BOXLR20G
+      - MYSQL_ROOT_PASSWORD=5WZuNyFHahIwlizJ
     security_opt:
       - seccomp:unconfined
 ```
@@ -45,11 +46,11 @@ max_connections = 1000
 -- 创建数据库
 CREATE DATABASE IF NOT EXISTS eams4test CHARSET utf8mb4;
 -- 创建用户
-create user 'eams4test'@'%' identified by 'tIKgUhK8BOXLR20G';
+create user 'eams4test'@'%' identified by '5WZuNyFHahIwlizJ';
 -- 设置用户密码不过期
-ALTER USER 'eams4test'@'%' IDENTIFIED BY 'tIKgUhK8BOXLR20G' PASSWORD EXPIRE NEVER;
+ALTER USER 'eams4test'@'%' IDENTIFIED BY '5WZuNyFHahIwlizJ' PASSWORD EXPIRE NEVER;
 -- 修改密码策略
-ALTER USER 'eams4test'@'%' IDENTIFIED WITH mysql_native_password BY 'tIKgUhK8BOXLR20G';
+ALTER USER 'eams4test'@'%' IDENTIFIED WITH mysql_native_password BY '5WZuNyFHahIwlizJ';
 -- 给用户授权
 grant drop,index,select,insert,update,delete,execute,alter,create,references,lock tables on eams4test.* to 'eams4test'@'%';
 -- 刷新权限
@@ -60,11 +61,11 @@ flush privileges;
 -- 创建数据库
 CREATE DATABASE IF NOT EXISTS eams4prod CHARSET utf8mb4;
 -- 创建用户
-create user 'eams4prod'@'%' identified by 'tIKgUhK8BOXLR20G';
+create user 'eams4prod'@'%' identified by '5WZuNyFHahIwlizJ';
 -- 设置用户密码不过期
-ALTER USER 'eams4prod'@'%' IDENTIFIED BY 'tIKgUhK8BOXLR20G' PASSWORD EXPIRE NEVER;
+ALTER USER 'eams4prod'@'%' IDENTIFIED BY '5WZuNyFHahIwlizJ' PASSWORD EXPIRE NEVER;
 -- 修改密码策略
-ALTER USER 'eams4prod'@'%' IDENTIFIED WITH mysql_native_password BY 'tIKgUhK8BOXLR20G';
+ALTER USER 'eams4prod'@'%' IDENTIFIED WITH mysql_native_password BY '5WZuNyFHahIwlizJ';
 -- 给用户授权
 grant drop,index,select,insert,update,delete,execute,alter,create,references,lock tables on eams4prod.* to 'eams4prod'@'%';
 -- 刷新权限

@@ -44,14 +44,30 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "开发手册",
+        text: "简介",
+        link: "/introduce",
+      },
+      {
+        text: "快速开始",
+        collapsed: false,
         items: [
-          { text: "简介", link: "/introduce" },
-          { text: "快速开始", link: "/install" },
-          { text: "安装 MySQL 数据库", link: "/install_mysql" },
-          { text: "配置系统字典", link: "/dict" },
-        ]
-      }
+          { text: "安装开发环境", link: "/start/install" },
+          { text: "安装 MySQL", link: "/start/install_mysql" },
+          { text: "安装 MinIO", link: "/start/install_minio" },
+          { text: "安装 Redis", link: "/start/install_redis" },
+          { text: "修改配置文件", link: "/start/init_env" },
+          { text: "初始化数据", link: "/start/initdb" },
+          { text: "配置系统字典", link: "/start/dict" },
+          { text: "本地启动", link: "/start/start" },
+        ],
+      },
+      {
+        text: "系统部署",
+        collapsed: false,
+        items: [
+          { text: "安装 Nginx", link: "/publish/install_nginx" },
+        ],
+      },
     ],
 
     // socialLinks: [

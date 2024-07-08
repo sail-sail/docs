@@ -1,5 +1,4 @@
-
-## 快速安装
+# 安装开发环境
   
   1. 安装vscode
      - https://code.visualstudio.com/
@@ -19,7 +18,7 @@
   ```
   pnpm i 的时候如果报错： pnpm: 无法加载文件 C:\Users\14059\AppData\Roaming\npm\pnpm.ps1，因为在此系统上禁止运行脚本
   
-  则说明pnpm脚本在powershell里面没有权限：
+  则说明 pnpm 脚本在 PowerShell 里面没有权限：
     用管理员方式打开 PowerShell 执行: set-ExecutionPolicy RemoteSigned 输入y
     查看设置是否成功: get-ExecutionPolicy
     返回: RemoteSigned
@@ -40,12 +39,12 @@
       - 进入uni目录， 执行 npm start 之后， 用微信小程序开发者工具打开 【工程目录】\uni\dist\dev\mp-weixin
       - 即为调试微信小程序
   
-  11. 安装mysql客户端 workbench
+  11. 安装mysql客户端 `workbench`
       - https://dev.mysql.com/downloads/workbench/6.3.html
       - 到了这个界面： https://dev.mysql.com/downloads/file/?id=514051
       - 时， 注意不需要注册，直接点击下面的 `No thanks, just start my download.` 即可下载
   
-  12. 注意（非常重要， 否则一大堆换行符被git认为文件修改了， 其实只是换行符不对）： 如果打开vsocde启动项目之后， 发现 types.ts 被修改了， 说明你的git有问题， 换行不对， 需要执行：
+  12. （注意）非常重要， 否则一大堆换行符被git认为文件修改了， 其实只是换行符不对， 需要执行：
   
   ```bash
   git config --global core.autocrlf false
@@ -57,9 +56,11 @@
       - `.env.prod` 为发布到linux服务器时的配置文件
   
   14. 要安装本项目推荐的vscode插件
-  ![alt text](img/vscode_plugin.png)
-  
-  ![alt text](img/vscode_plugin2.png)
+        ![alt text](../img/vscode_plugin.png)
+        
+        或者
+        
+        ![alt text](../img/vscode_plugin2.png)
   
   15. (可选) 如果全局安装 `npm i -g @antfu/ni`
       - 则: `npm start` 命令可改为 `nr start`

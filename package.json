@@ -1,11 +1,11 @@
 {
   "scripts": {
-    "start": "vitepress dev",
+    "start": "vitepress dev --port 8080",
     "build-prod": "vitepress build && node ./util/scripts/publish.js",
     "preview": "vitepress preview"
   },
   "devDependencies": {
     "ssh2-promise": "1.0.3",
-    "vitepress": "1.2.3"
+    "vitepress": "1.3.0"
   }
 }
