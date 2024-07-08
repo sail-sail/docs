@@ -28,7 +28,7 @@
   
 6.  创建配置文件 `/etc/nginx/conf.d/eams4test.conf`
     
-```conf
+```txt
 server {
   listen 7601;
   server_name 39.104.15.113;
