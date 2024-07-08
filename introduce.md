@@ -15,4 +15,4 @@
     
     - 其中 `电子档案` 菜单为当前项目的功能, 业务逻辑功能并不完整, 用于本次示例测试
 
-[![introduce1](../img/introduce1.jpg)](../img/introduce1.jpg){target="_blank"}
+[![introduce1](/img/introduce1.jpg)](/img/introduce1.jpg){target="_blank"}
