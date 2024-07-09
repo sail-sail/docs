@@ -15,7 +15,7 @@
     
     - 其中 `电子档案` 菜单为当前项目的功能, 业务逻辑功能并不完整, 用于本次示例测试
 
-[![introduce1](/img/introduce1.jpg)](/img/introduce1.jpg){target="_blank"}
+[![introduce1](/img/introduce1.jpg)](/img/introduce1.jpg)
 
 5. 联系作者
     - 微信: `sailnode`
@@ -26,4 +26,4 @@
     - 后端: deno + mysql + graphql + typescript
     - 第二套有相同功能的后端: rust + mysql + async-graphql
 
-7. [github](https://github.com/sail-sail/nest.git){target="_blank"}
+7. [github](https://github.com/sail-sail/nest.git)
