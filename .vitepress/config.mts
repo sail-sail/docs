@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/nest-docs/",
+  base: "/docs/",
   lang: "zh-CN",
   title: "低代码架构",
   description: "低代码架构开发手册",
