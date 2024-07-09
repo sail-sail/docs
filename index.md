@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开发手册
-      link: /introduce
+      link: /readme
 
 features:
   - title: 自动生代码

@@ -46,7 +46,7 @@ export default defineConfig({
     sidebar: [
       {
         text: "简介",
-        link: "/introduce",
+        link: "/readme",
       },
       {
         text: "快速开始",
