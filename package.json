@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "vitepress dev --port 8080",
+    "docs:build": "vitepress build",
     "build-prod": "vitepress build && node ./util/scripts/publish.js",
     "preview": "vitepress preview"
   },
