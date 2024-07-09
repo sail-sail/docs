@@ -3,6 +3,7 @@
 1. 准备好 `ubuntu 20` 或者以上的系统
     - 假设外网 IP 为 `39.104.15.113`
 2. 安装好 `docker` 和 `docker-compose`
+    - [Ubuntu 安装 Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository){target="_blank"}
 3. 创建 `/data/software/mysql` 目录
 4. 在 `/data/software/mysql` 目录下创建 `docker-compose.yml` 文件
 

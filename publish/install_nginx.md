@@ -88,3 +88,6 @@ server {
   - 执行 `sudo nginx -s reload` 重新加载 `Nginx` 配置文件
   - 其中, 假设 `.env.test` 中的 `server_port` 为 `6601`, 对外提供的端口为 `7601`
 
+7. 同理, 正式库则创建配置文件 `/etc/nginx/conf.d/eams4prod.conf`
+    
+    - 配置文件里面的 `eams4test` 改为 `eams4prod`, 端口号改为正式库配置文件 `.env.prod` 中的 `server_port`
