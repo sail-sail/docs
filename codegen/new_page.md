@@ -141,7 +141,7 @@ KbZS6RW5TaK4rZGVBUXMfQ,AEK9E7ZTTV+ZTXNpx73AOg,全宗设置,/eams/archive,,1,9003
     - 此时会自动生成 `base_role_menu.eams.sql.csv` 文件跟 `base_tenant_menu.eams.sql.csv` 文件, 这 2 个文件需要提交到代码仓库
     - 同时导入这个模块的 `.sql.csv` 文件到数据库, 已经存在的数据不会修改, 不存在的数据会自动插入
 
-7. 如需给表的某个字段配置 `业务字段` 或者 `系统字典`, 参考 [配置系统字段](./dict)
+7. 如需给表的某个字段配置 `业务字段` 或者 `系统字典`, 参考 [配置系统字段](/start/dict)
 
 8. 执行命令 `npm run codegen` 或者 `nr codegen` 生成代码
 
