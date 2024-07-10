@@ -4,8 +4,8 @@ import { defineConfig } from "vitepress"
 export default defineConfig({
   base: "/docs/",
   lang: "zh-CN",
-  title: "低代码架构",
-  description: "低代码架构开发手册",
+  title: "低代码开发框架",
+  description: "低代码框架开发手册",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outline: false,
@@ -69,6 +69,13 @@ export default defineConfig({
           { text: "安装 Nodejs", link: "/publish/install_node" },
           { text: "安装 Nginx", link: "/publish/install_nginx" },
           { text: "发布系统", link: "/publish/publish" },
+        ],
+      },
+      {
+        text: "自动生成代码",
+        collapsed: false,
+        items: [
+          { text: "原理", link: "/codegen/principle" },
         ],
       },
     ],

@@ -3,9 +3,8 @@
 layout: home
 
 hero:
-  name: "低代码平台"
-  text: "低代码平台开发手册"
-  tagline: 基于编译时的自动生成代码平台
+  name: "低代码开发框架"
+  tagline: 基于编译时的自动生成代码框架
   actions:
     - theme: brand
       text: 开发手册

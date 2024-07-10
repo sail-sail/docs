@@ -23,4 +23,31 @@
 2. `deno/.env.test` 文件, 为 `测试环境` 配置文件
     - 其中 `tmpfile_bucket` 固定为 `tmpfile4[项目名]4[环境名]`, 例如: `tmpfile4eams4test`, `tmpfile4eams4prod`
     
-2. `deno/.env.prod` 文件, 为 `生产环境` 配置文件
+3. `deno/.env.prod` 文件, 为 `生产环境` 配置文件
+
+4. 在工程目录下(`deno`的上一层目录)创建 `database_crypto_key.txt` 文件, 用于当数据库某些字段需要 `脱敏` 时使用, 里面的内容为任意 `16` 位随机字符串
+   - 例如:
+    ```txt
+    qgWh4gsTUEwwSoCw
+    ```
+    - 第一次发布系统时, 该文件需要手动上传到服务器中, 用于解密数据库中的脱敏字段
+
+5. 修改文件 `ecosystem.config.js` 用于发布到服务器上后的 `pm2` 配置文件
+
+  ```js
+  module.exports = {
+    apps: [{
+      name: "eams4{env}",
+      script: "./eams4{env}",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      env: {
+      },
+      env_production: {
+      },
+    }],
+  };
+  
+  ```
+  - 其中 `eams` 为项目名, 可替换成自己的项目名, `{env}` 为环境名, 无需修改, 编译的时候会自动替换
