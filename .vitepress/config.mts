@@ -75,7 +75,8 @@ export default defineConfig({
         text: "自动生成代码",
         collapsed: false,
         items: [
-          { text: "原理", link: "/codegen/principle" },
+          { text: "建新页面", link: "/codegen/new_page" },
+          { text: "生成代码原理", link: "/codegen/principle" },
         ],
       },
     ],

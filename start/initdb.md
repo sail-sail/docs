@@ -42,4 +42,4 @@
     });
     ```
 9. 如需给表的某个字段配置 `业务字段` 或者 `系统字典`, 参考 [配置系统字段](./dict)
-9. 执行 `npm run codegen` 或者 `nr codegen` 生成代码
+10. 执行 `npm run codegen` 或者 `nr codegen` 生成代码
