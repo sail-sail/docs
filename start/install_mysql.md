@@ -45,7 +45,7 @@ max_connections = 1000
 11. 假设项目名称为 `eams` ，在 `mysqlworkbench` 中连接数据库，创建 `测试库` ，sql 如下:
 ```sql
 -- 创建数据库
-CREATE DATABASE IF NOT EXISTS eams4test CHARSET utf8mb4;
+CREATE DATABASE IF NOT EXISTS eams4test CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;;
 -- 创建用户
 create user 'eams4test'@'%' identified by '5WZuNyFHahIwlizJ';
 -- 设置用户密码不过期
@@ -60,7 +60,7 @@ flush privileges;
 12. 在 `mysqlworkbench` 中连接数据库，创建 `正式库` ，sql 如下:
 ```sql
 -- 创建数据库
-CREATE DATABASE IF NOT EXISTS eams4prod CHARSET utf8mb4;
+CREATE DATABASE IF NOT EXISTS eams4prod CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;;
 -- 创建用户
 create user 'eams4prod'@'%' identified by '5WZuNyFHahIwlizJ';
 -- 设置用户密码不过期
