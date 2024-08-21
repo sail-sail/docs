@@ -10,3 +10,5 @@
 3. 然后再手动点击 `git` 的 对比工具, 左右对比生成代码修改了哪些, 自己手动改的代码修改了哪些, 即可合理处理冲突
   
 ![codegen_conflict2](/img/codegen_conflict2.jpg)
+
+4. 处理完成冲突之后, 需要将 工程目录下的文件 和 `__out__` 目录下的对应文件 添加到 git 的暂存区, 然后再执行 `npm run codegen` 或者 `nr codegen` 重新生成代码
