@@ -34,5 +34,7 @@
     "**/pnpm-lock.yaml": true,
     "**/node_modules/**": true,
     ".vitepress/cache/**": true
-  }
+  },
+  "npm.registry": "https://registry.npmmirror.com",
+  "npm.updateStrategy": "LATEST"
 }

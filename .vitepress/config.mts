@@ -78,6 +78,7 @@ export default defineConfig({
           { text: "建新页面", link: "/codegen/new_page" },
           { text: "生成代码原理", link: "/codegen/principle" },
           { text: "数据库建表规范", link: "/codegen/create_table" },
+          { text: "生成代码跟手写代码冲突处理", link: "/codegen/conflict" },
         ],
       },
     ],
