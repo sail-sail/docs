@@ -12,3 +12,5 @@
 ![codegen_conflict2](/img/codegen_conflict2.jpg)
 
 4. 处理完成冲突之后, 需要将 工程目录下的文件 和 `__out__` 目录下的对应文件 添加到 git 的暂存区, 然后再执行 `npm run codegen` 或者 `nr codegen` 重新生成代码
+
+![codegen_conflict3](/img/codegen_conflict3.jpg)
