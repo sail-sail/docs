@@ -45,13 +45,11 @@ max_connections = 1000
 11. 假设项目名称为 `eams` ，在 `mysqlworkbench` 中连接数据库，创建 `测试库` ，sql 如下:
 ```sql
 -- 创建数据库
-CREATE DATABASE IF NOT EXISTS eams4test CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;;
+CREATE DATABASE IF NOT EXISTS eams4test CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 -- 创建用户
 create user 'eams4test'@'%' identified by '5WZuNyFHahIwlizJ';
 -- 设置用户密码不过期
 ALTER USER 'eams4test'@'%' IDENTIFIED BY '5WZuNyFHahIwlizJ' PASSWORD EXPIRE NEVER;
--- 修改密码策略
-ALTER USER 'eams4test'@'%' IDENTIFIED WITH mysql_native_password BY '5WZuNyFHahIwlizJ';
 -- 给用户授权
 grant drop,index,select,insert,update,delete,execute,alter,create,references,lock tables on eams4test.* to 'eams4test'@'%';
 -- 刷新权限
@@ -60,13 +58,11 @@ flush privileges;
 12. 在 `mysqlworkbench` 中连接数据库，创建 `正式库` ，sql 如下:
 ```sql
 -- 创建数据库
-CREATE DATABASE IF NOT EXISTS eams4prod CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;;
+CREATE DATABASE IF NOT EXISTS eams4prod CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 -- 创建用户
 create user 'eams4prod'@'%' identified by '5WZuNyFHahIwlizJ';
 -- 设置用户密码不过期
 ALTER USER 'eams4prod'@'%' IDENTIFIED BY '5WZuNyFHahIwlizJ' PASSWORD EXPIRE NEVER;
--- 修改密码策略
-ALTER USER 'eams4prod'@'%' IDENTIFIED WITH mysql_native_password BY '5WZuNyFHahIwlizJ';
 -- 给用户授权
 grant drop,index,select,insert,update,delete,execute,alter,create,references,lock tables on eams4prod.* to 'eams4prod'@'%';
 -- 刷新权限

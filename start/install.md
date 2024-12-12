@@ -8,10 +8,11 @@
   
   3. git克隆项目
   
-  4. 安装nodejs， nodejs的版本需为20
+  4. 安装nodejs， nodejs的版本需为 v22.12.0 以及以上
      - https://nodejs.org/en/
   
-  5. 安装pnpm:  在cmd下执行 `npm i -g pnpm`
+  5. 安装pnpm:  在cmd下执行 `npm i -g pnpm --registry https://registry.npmmirror.com`
+     - 注意是cmd，而不是powershell
   
   6. cmd 进入工程所在目录， 在最外层文件夹和 `pc` `deno` `codegen` `uni` 目录下分别执行： `pnpm i` 来安装依赖包
      - 其中：`pc` 是电脑端， `deno` 是后端，`uni` 是小程序端， `codegen` 是代码自动生成工具
