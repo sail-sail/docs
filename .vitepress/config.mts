@@ -81,6 +81,14 @@ export default defineConfig({
           { text: "生成代码跟手写代码冲突处理", link: "/codegen/conflict" },
         ],
       },
+      {
+        text: "从零开始开发家政服务系统",
+        collapsed: false,
+        items: [
+          { text: "开发环境准备", link: "/zzj4jz/start" },
+          { text: "创建数据库表", link: "/zzj4jz/create_table" },
+        ],
+      },
     ],
 
     // socialLinks: [
