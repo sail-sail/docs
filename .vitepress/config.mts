@@ -1,7 +1,8 @@
-import { defineConfig } from "vitepress"
+import { withMermaid } from "vitepress-plugin-mermaid";
+import { deno_items } from "./repowiki/deno_items.mts";
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   base: "/docs/",
   lang: "zh-CN",
   title: "低代码开发框架",
@@ -87,6 +88,13 @@ export default defineConfig({
         items: [
           { text: "开发环境准备", link: "/zzj4jz/start" },
           { text: "创建数据库表", link: "/zzj4jz/create_table" },
+        ],
+      },
+      {
+        text: "详细手册 Wiki (后端 Deno)",
+        collapsed: true,
+        items: [
+          ...deno_items,
         ],
       },
     ],

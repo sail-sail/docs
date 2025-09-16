@@ -2,11 +2,14 @@
   "scripts": {
     "start": "vitepress dev --port 8080",
     "docs:build": "vitepress build",
+    "qoder_wiki": "node ./util/scripts/qoder_wiki.js",
     "build-prod": "vitepress build && node ./util/scripts/publish.js",
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "mermaid": "11.11.0",
     "ssh2-promise": "1.0.3",
-    "vitepress": "1.6.3"
+    "vitepress": "1.6.4",
+    "vitepress-plugin-mermaid": "2.0.17"
   }
 }
