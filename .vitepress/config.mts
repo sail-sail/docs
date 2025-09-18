@@ -1,5 +1,6 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { deno_items } from "./repowiki/deno_items.mts";
+import { rust_items } from "./repowiki/rust_items.mts";
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -95,6 +96,13 @@ export default withMermaid({
         collapsed: true,
         items: [
           ...deno_items,
+        ],
+      },
+      {
+        text: "详细手册 Wiki (后端 Rust)",
+        collapsed: true,
+        items: [
+          ...rust_items,
         ],
       },
     ],

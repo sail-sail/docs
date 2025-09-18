@@ -12,6 +12,9 @@ hero:
     - theme: brand
       text: 详细手册 Wiki (后端 Deno)
       link: /repowiki/deno/系统概述
+    - theme: brand
+      text: 详细手册 Wiki (后端 Rust)
+      link: /repowiki/rust/系统概述
 
 features:
   - title: 自动生代码
