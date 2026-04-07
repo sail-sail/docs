@@ -54,7 +54,7 @@
       - 例如: `codegen/src/tables/eams/eams.ts`
       
 ```typescript
-import { defineConfig } from "../../config";
+import { defineConfig } from "../../config.ts";
 
 export default defineConfig({
   // 单位
@@ -108,12 +108,12 @@ export default defineConfig({
 4. 修改文件 `codegen/src/tables/tables.ts` 增加模块 `eams`
 
 ```typescript
-import { defineConfig } from "../config";
+import { defineConfig } from "../config.ts";
  
-import base from "./base/base";
+import base from "./base/base.ts";
  
 // 电子档案
-import eams from "./eams/eams";
+import eams from "./eams/eams.ts";
  
 export default defineConfig({
   

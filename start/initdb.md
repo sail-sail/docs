@@ -24,12 +24,12 @@
 
 8. 在 `codegen/tables/tables.ts` 文件中增加 `eams` 模块
     ```ts
-    import { defineConfig } from "../config";
+    import { defineConfig } from "../config.ts";
 
-    import base from "./base/base";
+    import base from "./base/base.ts";
 
     // 电子档案
-    import eams from "./eams/eams";
+    import eams from "./eams/eams.ts";
 
     export default defineConfig({
       

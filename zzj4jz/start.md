@@ -6,7 +6,7 @@
   
   ```sql
   -- 创建数据库
-  CREATE DATABASE IF NOT EXISTS zzj4jz4test CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+  CREATE DATABASE IF NOT EXISTS zzj4jz4test CHARSET utf8mb4 COLLATE utf8mb4_0900_as_cs;
   -- 创建用户
   create user 'zzj4jz4test'@'%' identified by '[密码]';
   -- 设置用户密码不过期

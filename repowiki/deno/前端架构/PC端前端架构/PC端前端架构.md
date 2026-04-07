@@ -74,8 +74,8 @@ pc/
 ```typescript
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router/index";
-import { headerOrderDragDirective } from "./components/TableHeaderOrderDrag";
+import router from "./router/index.ts";
+import { headerOrderDragDirective } from "./components/TableHeaderOrderDrag.ts";
 import { autoAnimatePlugin } from "@formkit/auto-animate/vue";
 
 const app = createApp(App);
@@ -109,7 +109,7 @@ app.mount("#app");
 
 ```typescript
 import { createRouter, createWebHashHistory } from "vue-router";
-import { routesGen } from "./gen";
+import { routesGen } from "./gen.ts";
 import Layout1 from "@/layout/layout1/index.vue";
 
 const routes = [

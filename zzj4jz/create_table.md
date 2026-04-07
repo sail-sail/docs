@@ -32,10 +32,10 @@ CREATE TABLE if not exists `zzj4jz_pt_type` (
   `delete_usr_id` varchar(22) NOT NULL DEFAULT '' COMMENT '删除人',
   `delete_usr_id_lbl` varchar(45) NOT NULL DEFAULT '' COMMENT '删除人',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`code`, `tenant_id`, `is_deleted`),
-  INDEX (`lbl`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `code`),
+  INDEX (`tenant_id`, `is_deleted`, `lbl`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='产品类别';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='产品类别';
 
 ------------------------------------------------------------------ 产品
 drop table if exists `zzj4jz_pt`;
@@ -68,9 +68,9 @@ CREATE TABLE if not exists `zzj4jz_pt` (
   `delete_usr_id` varchar(22) NOT NULL DEFAULT '' COMMENT '删除人',
   `delete_usr_id_lbl` varchar(45) NOT NULL DEFAULT '' COMMENT '删除人',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`lbl`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `lbl`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='产品';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='产品';
 
 ------------------------------------------------------------------ 产品产品类别
 drop table if exists `zzj4jz_pt_pt_type`;
@@ -86,9 +86,9 @@ CREATE TABLE if not exists `zzj4jz_pt_pt_type` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `is_deleted` tinyint unsigned NOT NULL DEFAULT 0 COMMENT '删除,dict:is_deleted',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`pt_id`, `pt_type_id`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `pt_id`, `pt_type_id`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='产品产品类别';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='产品产品类别';
 
 ------------------------------------------------------------------ 用户购物车
 drop table if exists `zzj4jz_cart`;
@@ -105,9 +105,9 @@ CREATE TABLE if not exists `zzj4jz_cart` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `is_deleted` tinyint unsigned NOT NULL DEFAULT 0 COMMENT '删除,dict:is_deleted',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`pt_id`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `pt_id`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='用户购物车';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='用户购物车';
 
 ------------------------------------------------------------------ 用户地址
 drop table if exists `zzj4jz_address`;
@@ -135,9 +135,9 @@ CREATE TABLE if not exists `zzj4jz_address` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `is_deleted` tinyint unsigned NOT NULL DEFAULT 0 COMMENT '删除,dict:is_deleted',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`lbl`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `lbl`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='用户地址';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='用户地址';
 
 ------------------------------------------------------------------ 订单
 drop table if exists `zzj4jz_order`;
@@ -171,9 +171,9 @@ CREATE TABLE if not exists `zzj4jz_order` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `is_deleted` tinyint unsigned NOT NULL DEFAULT 0 COMMENT '删除,dict:is_deleted',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`lbl`, `usr_id`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `lbl`, `usr_id`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='订单';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='订单';
 
 ------------------------------------------------------------------ 订单明细
 drop table if exists `zzj4jz_order_detail`;
@@ -194,9 +194,9 @@ CREATE TABLE if not exists `zzj4jz_order_detail` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `is_deleted` tinyint unsigned NOT NULL DEFAULT 0 COMMENT '删除,dict:is_deleted',
   `delete_time` datetime DEFAULT NULL COMMENT '删除时间',
-  INDEX (`order_id`, `pt_id`, `tenant_id`, `is_deleted`),
+  INDEX (`tenant_id`, `is_deleted`, `order_id`, `pt_id`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='订单明细';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='订单明细';
 ```
 
 3. 把建表语句复制到 `workbench` 中执行
@@ -232,7 +232,7 @@ QDfyMK5GQ9KQkOtucQWNHw,IuMhUG6HSEy5h7AUYhoCIw,,已取消,canceled,3,ZDbZlC1OT8Ka
 6. 创建文件 `codegen/tables/zzj4jz/zzj4jz.ts` 用户配置哪些表需要生成代码
 
 ```ts
-import { defineConfig } from "../../config";
+import { defineConfig } from "../../config.ts";
 
 export default defineConfig({
   // 产品类别
